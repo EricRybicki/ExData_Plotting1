@@ -13,10 +13,10 @@ hpc$DateTime <- strptime( apply( hpc[ , c("Date","Time") ], 1, paste, collapse="
 ## Create plot3
 png(file="plot3.png")
 plot(hpc$DateTime, hpc$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
-lines(hpc$DateTime, hpc$Sub_metering_1)
-lines(hpc$DateTime, hpc$Sub_metering_2, col= "red" )
-lines(hpc$DateTime, hpc$Sub_metering_3, col= "blue" )
-legend("topright", lty=c(1,1), col=c("black", "red", "blue"),cex=1, 
+    lines(hpc$DateTime, hpc$Sub_metering_1)
+    lines(hpc$DateTime, hpc$Sub_metering_2, col= "red" )
+    lines(hpc$DateTime, hpc$Sub_metering_3, col= "blue" )
+    legend("topright", lty=c(1,1), col=c("black", "red", "blue"),cex=1, 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()

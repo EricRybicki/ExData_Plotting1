@@ -14,6 +14,6 @@ hpc$DateTime <- strptime( apply( hpc[ , c("Date","Time") ], 1, paste, collapse="
 png(file="plot2.png")
 plot(hpc$DateTime, hpc$Global_active_power, type="n",xlab="",
      ylab="Global Active Power (kilowatts)")
-lines(hpc$DateTime, hpc$Global_active_power)
+    lines(hpc$DateTime, hpc$Global_active_power)
 
 dev.off()
